@@ -1,0 +1,67 @@
+// $primary-color: rgba(0, 0, 0, 0.87);
+$letras-color: #f4cb42;
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+  background-color: #EBEBEB;
+}
+
+.header {
+  padding: 10px 40px;
+
+  .formulario {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.area-produto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.produto {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+
+  .imagens {
+    width: 9rem;
+  }
+}
+
+.carrinho {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border: 0px;
+
+  p {
+    margin: 0em;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .icones {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    i {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid $letras-color;
+      border-radius: 50%;
+    }
+  }
+}

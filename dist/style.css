@@ -16,7 +16,7 @@ body {
   flex-direction: row;
 }
 .container-menu{
-  width: 200px;
+  width: 220px;
 }
 
 .logo-loja{
@@ -60,9 +60,13 @@ div.body-content{
 footer.fixar-rodape{
   bottom: 0;
   left: 0;
-  height: 80px;
+  height: 40px;
   position: fixed;
   width: 100%;
+}
+.icones{
+  list-style: none;
+  width: 150px;
 }
 /* footer {
   display: flex;

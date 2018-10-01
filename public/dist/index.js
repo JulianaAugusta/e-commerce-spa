@@ -39,7 +39,7 @@ function renderProductsList(products) {
 function renderProduct(product) {
   return `
   <div class="container"><div class="row area-produto">
-    <div class="col-lg-10 produto produtoItem" data-id="${product.id}">
+    <div class="col-lg-10 produto produto-item p-4" data-id="${product.id}">
       <div class = "single-product-wrapper" >
       <h6>${product.title}</h6>
         <div class="product-img">
@@ -49,7 +49,7 @@ function renderProduct(product) {
           <p class="product-price"> R$ ${product.price}</p>
           <div class="hover-content">
             <div class="add-to-cart-btn">
-             <button onclick="addCarrinho()" type="button">Adicionar no carrinho</button>
+             <button onclick="renderCarrinho()" type="button">Adicionar no carrinho</button>
             </div>
           </div>
           </div>
@@ -59,55 +59,6 @@ function renderProduct(product) {
     </div>
     `;
 }
-
-function renderCarrinho () {
-
-  return `
-  <h2 class="mt-0 title-card mt-5 ml-5"> Carrinho de compras</h2>
-  <h2 class="mt-0 title-card ml-5">produtos adicionados </h2>
-  <div class=" item-card media">
-  <img id="img" src="productImg" "width="90" height="90">
-  <div class="media-body">
-
-    <p id="produto" > </p>
-    <p id="price" class="mb-0 font-weight-bold">   </p>
-    <div class ="d-flex justify-content-end">
-    <button class= " btn btn-color btn-sm"onClick="removeItem()" class ="demo" id'remove'> Remover Item </button>
-    </div >
-    <p class="mb-0"> </p>
-  </div>
-</div>
-  `
-}
-
-function addCarrinho(produto) {
-
-  productInf = produto;
-  console.log(productInf)
-
-  productTitle = productInf[0]
-  console.log(productTitle)
-  productImg = productInf[1]
-  console.log(productImg)
-  productPrice = productInf[2]
-  console.log(productPrice)
-
-  localStorage.setItem('title', productTitle);
-  localStorage.setItem('img', productImg);
-  localStorage.setItem('price', productPrice);
-
-
-}
-
-function removeItem (){
-alert ('item removido, atualize a página!');
-console.log('remove')
-
-localStorage.removeItem('title');
-localStorage.removeItem('price');
-localStorage.removeItem('img');
-}
-
 
 $('.carousel').carousel({
   interval: 2000

@@ -57,6 +57,10 @@ div.body-content{
   margin-bottom: 10px;
 }
 
+.produto-item{
+  margin-top: 50px;
+}
+
 footer.fixar-rodape{
   bottom: 0;
   left: 0;
@@ -69,8 +73,9 @@ footer.fixar-rodape{
   width: 150px;
 }
 
+
 @media screen and (max-width: 575px) {
-  .area-produto .produtoItem {
+  .area-produto .produto-item {
     width: 83vw;
     height: 68vh;
   }

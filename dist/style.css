@@ -68,19 +68,10 @@ footer.fixar-rodape{
   list-style: none;
   width: 150px;
 }
-/* footer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+
+@media screen and (max-width: 575px) {
+  .area-produto .produtoItem {
+    width: 83vw;
+    height: 68vh;
+  }
 }
-footer .icones {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-footer .icones i {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #f4cb42;
-  border-radius: 50%;
-} */

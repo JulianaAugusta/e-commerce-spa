@@ -2,6 +2,7 @@ $(document).ready(function(){
   page('/', index);
   page('/products', products);
   page('/product/:productId', product);
+  page ('/carrinho', carrinho );
   page();
 });
 
@@ -33,4 +34,13 @@ function getProduct(id) {
     access_token=APP_USR-2203506221789612-092014-4da1823b26643e8947e11e50342db4aa-315570596`)
     .then((response) => response.json())
     .then((json) => json);
+}
+
+function carrinho(){
+
+    $("main").html(renderCarrinho());
+    document.getElementById("produto").innerHTML = localStorage.getItem("title");
+    document.getElementById("img").src = localStorage.getItem("img");
+    document.getElementById("price").innerHTML = 'Valor R$ '+ localStorage.getItem("price");
+
 }

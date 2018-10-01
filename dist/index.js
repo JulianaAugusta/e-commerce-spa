@@ -60,19 +60,54 @@ function renderProduct(product) {
     `;
 }
 
-function addProduto() {
-  if (localStorage.clickcount) {
-    localStorage.clickcount = Number(localStorage.clickcount) + 1;
-  } else {
-    localStorage.clickcount = 1;
-  }
-  document.getElementById("meu-carrinho").innerHTML = localStorage.clickcount;
+function renderCarrinho () {
+
+  return `
+  <h2 class="mt-0 title-card mt-5 ml-5"> Carrinho de compras</h2>
+  <h2 class="mt-0 title-card ml-5">produtos adicionados </h2>
+  <div class=" item-card media">
+  <img id="img" src="productImg" "width="90" height="90">
+  <div class="media-body">
+
+    <p id="produto" > </p>
+    <p id="price" class="mb-0 font-weight-bold">   </p>
+    <div class ="d-flex justify-content-end">
+    <button class= " btn btn-color btn-sm"onClick="removeItem()" class ="demo" id'remove'> Remover Item </button>
+    </div >
+    <p class="mb-0"> </p>
+  </div>
+</div>
+  `
+}
+
+function addCarrinho(produto) {
+
+  productInf = produto;
+  console.log(productInf)
+
+  productTitle = productInf[0]
+  console.log(productTitle)
+  productImg = productInf[1]
+  console.log(productImg)
+  productPrice = productInf[2]
+  console.log(productPrice)
+
+  localStorage.setItem('title', productTitle);
+  localStorage.setItem('img', productImg);
+  localStorage.setItem('price', productPrice);
+
 
 }
 
-function getProductCarrinho() {
-  // localStorage.getItem("array");
+function removeItem (){
+alert ('item removido, atualize a página!');
+console.log('remove')
+
+localStorage.removeItem('title');
+localStorage.removeItem('price');
+localStorage.removeItem('img');
 }
+
 
 $('.carousel').carousel({
   interval: 2000
